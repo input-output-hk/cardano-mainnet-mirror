@@ -1,0 +1,23 @@
+cabal-version:       2.0
+
+name:                cardano-mainnet-mirror
+version:             0.1.0.0
+synopsis:            A convenient wrapper for the mirror of Cardano mainnet
+description:         This package provides a list of FilePaths to the Cardano mainnet data files
+license:             MIT
+license-file:        LICENSE
+author:              IOHK
+maintainer:          operations@iohk.io
+category:            Currency
+extra-source-files:  README.md
+data-dir:            epochs
+data-files:          *.index *.epoch *.boundary
+
+library
+  exposed-modules:     Cardano.Mirror
+  other-modules:       Paths_cardano_mainnet_mirror
+  build-depends:       base
+                     , directory
+                     , filepath
+  hs-source-dirs:      src
+  default-language:    Haskell2010
