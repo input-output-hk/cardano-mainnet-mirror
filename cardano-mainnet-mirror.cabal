@@ -12,10 +12,12 @@ category:            Currency
 extra-source-files:  README.md
 data-dir:            epochs
 data-files:          *.index *.epoch *.boundary
+build-type:          Simple
 
 library
   exposed-modules:     Cardano.Mirror
   other-modules:       Paths_cardano_mainnet_mirror
+  autogen-modules:     Paths_cardano_mainnet_mirror
   build-depends:       base
                      , directory
                      , filepath
